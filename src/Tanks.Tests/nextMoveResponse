@@ -1,0 +1,194 @@
+{
+  "number": 64,
+  "tanks": [
+    {
+      "name": "ItaStallion",
+      "color": "0xd957e2",
+      "hp": 50,
+      "position": {
+        "x": 500,
+        "y": 221.98
+      },
+      "alive": true
+    },
+    {
+      "name": "killerBrick",
+      "color": "0xc27ae7",
+      "hp": 100,
+      "position": {
+        "x": 318.14,
+        "y": 126.49
+      },
+      "alive": true
+    },
+    {
+      "name": "42",
+      "color": "0xa7a77d",
+      "hp": 100,
+      "position": {
+        "x": 29.43,
+        "y": 73.66
+      },
+      "alive": true
+    },
+    {
+      "name": "choke",
+      "color": "0xed1569",
+      "hp": 100,
+      "position": {
+        "x": -359.14,
+        "y": 158.14
+      },
+      "alive": true
+    },
+    {
+      "name": "DROP TABLE",
+      "color": "0x7e9909",
+      "hp": 100,
+      "position": {
+        "x": -257.29,
+        "y": 172.86
+      },
+      "alive": true
+    },
+    {
+      "name": "MrRobot",
+      "color": "0xeb0700",
+      "hp": 100,
+      "position": {
+        "x": 191.29,
+        "y": 126.25
+      },
+      "alive": true
+    }
+  ],
+  "outcome": [
+    {
+      "name": "ItaStallion",
+      "color": "0xd957e2",
+      "type": "miss",
+      "hitCoordinates": null,
+      "target": null,
+      "targetDestroyed": false,
+      "bulletTrajectory": null,
+      "tankMovement": [
+        {
+          "x": 500,
+          "y": 221.98
+        }
+      ]
+    },
+    {
+      "name": "killerBrick",
+      "color": "0xc27ae7",
+      "type": "miss",
+      "hitCoordinates": null,
+      "target": null,
+      "targetDestroyed": false,
+      "bulletTrajectory": null,
+      "tankMovement": [
+        {
+          "x": 318.14,
+          "y": 126.49
+        }
+      ]
+    },
+    {
+      "name": "42",
+      "color": "0xa7a77d",
+      "type": "miss",
+      "hitCoordinates": null,
+      "target": null,
+      "targetDestroyed": false,
+      "bulletTrajectory": null,
+      "tankMovement": [
+        {
+          "x": 29.43,
+          "y": 73.66
+        }
+      ]
+    },
+    {
+      "name": "choke",
+      "color": "0xed1569",
+      "type": "ground_hit",
+      "hitCoordinates": {
+        "x": -353.01,
+        "y": 159.12
+      },
+      "target": null,
+      "targetDestroyed": false,
+      "bulletTrajectory": [
+        {
+          "x": -359.14,
+          "y": 168.14
+        },
+        {
+          "x": -357.83,
+          "y": 169.05
+        },
+        {
+          "x": -356.66,
+          "y": 169.15
+        },
+        {
+          "x": -355.62,
+          "y": 168.45
+        },
+        {
+          "x": -354.72,
+          "y": 166.93
+        },
+        {
+          "x": -353.95,
+          "y": 164.62
+        },
+        {
+          "x": -353.32,
+          "y": 161.52
+        },
+        {
+          "x": -353.01,
+          "y": 159.12
+        }
+      ],
+      "tankMovement": [
+        {
+          "x": -359.14,
+          "y": 158.14
+        }
+      ]
+    },
+    {
+      "name": "DROP TABLE",
+      "color": "0x7e9909",
+      "type": "miss",
+      "hitCoordinates": null,
+      "target": null,
+      "targetDestroyed": false,
+      "bulletTrajectory": null,
+      "tankMovement": [
+        {
+          "x": -257.29,
+          "y": 172.86
+        }
+      ]
+    },
+    {
+      "name": "MrRobot",
+      "color": "0xeb0700",
+      "type": "miss",
+      "hitCoordinates": null,
+      "target": null,
+      "targetDestroyed": false,
+      "bulletTrajectory": null,
+      "tankMovement": [
+        {
+          "x": 191.29,
+          "y": 126.25
+        }
+      ]
+    }
+  ],
+  "last": false
+}
