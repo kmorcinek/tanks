@@ -14,6 +14,14 @@ namespace Tanks.Tests
             Assert.NotNull(gameSetup);
         }
 
+        [Fact]
+        public void should_serialize_response_content2()
+        {
+            var gameSetup = JsonConvert.DeserializeObject<GameSetup>(content);
+
+            Assert.NotNull(gameSetup);
+        }
+
         private const string content = @"{
   ""name"" : ""master game #225"",
   ""scene"" : {
