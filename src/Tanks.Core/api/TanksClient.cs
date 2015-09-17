@@ -41,22 +41,29 @@ namespace Tanks.Core.api
         public virtual TurnResult submitMove(Command move)
         {
             //log.info("Sending {}", move);
-            return request<TurnResult>("moves", move, Method.POST);
+            return request<TurnResult>("/moves", move, Method.POST);
         }
 
-        public virtual GameSetup MyGameSetup
+        public GameSetup MyGameSetup()
         {
-            get { return request<GameSetup>("http://10.12.202.141:9999/tournaments/master/games/my/setup", null, Method.GET); }
+            return request<GameSetup>("/games/my/setup", null, Method.GET);
         }
 
         private RESULT request<RESULT>(string path, Command command, RestSharp.Method method)
         {
-            var restClient = new RestClient(path);
+            var restClient = new RestClient(this.url + this.tournamentId + path);
             restClient.AddDefaultHeader("Authorization", accessToken);
             restClient.AddDefaultHeader("Accept-Encoding", "gzip");
 
             var request = new RestRequest(method);
+            //request.AddHeader("Content-Type", "application/json");
 
+            if (method == Method.POST)
+            {
+                var serialize = request.JsonSerializer.Serialize(command);
+                request.AddParameter("application/json", serialize, ParameterType.RequestBody);
+                //request.AddBody(serialize);
+            }
             request.RequestFormat = DataFormat.Json;
 
             IRestResponse response = restClient.Execute(request);
@@ -69,6 +76,7 @@ namespace Tanks.Core.api
             //log.info(responseText);
             if (response.StatusCode != HttpStatusCode.OK)
             {
+                Console.WriteLine(response.StatusCode + " status to byl");
                 throw new Exception();
             }
             return JsonConvert.DeserializeObject<RESULT>(response.Content);
