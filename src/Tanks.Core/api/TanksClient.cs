@@ -54,31 +54,24 @@ namespace Tanks.Core.api
             var restClient = new RestClient(path);
             restClient.AddDefaultHeader("Authorization", accessToken);
             restClient.AddDefaultHeader("Accept-Encoding", "gzip");
-            //Builder builder = client.targetuniquetempvar.path(path).request().header("Authorization", accessToken).header("Accept-Encoding", "gzip");
 
             var request = new RestRequest(method);
 
             request.RequestFormat = DataFormat.Json;
 
-            //request.AddBody(request.JsonSerializer.Serialize(command));
-
             IRestResponse response = restClient.Execute(request);
-
-            //Response response = sendRequest(post, builder);
 
             return readResponse<RESULT>(response);
         }
 
         private RESULT readResponse<RESULT>(IRestResponse response)
         {
-            //string responseText = response.Content .readEntity(typeof(string));
             //log.info(responseText);
             if (response.StatusCode != HttpStatusCode.OK)
             {
                 throw new Exception();
             }
             return JsonConvert.DeserializeObject<RESULT>(response.Content);
-            //return mapper.readValue(responseText, responseType);
         }
     }
 }
