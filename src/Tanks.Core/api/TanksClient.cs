@@ -58,7 +58,6 @@ namespace Tanks.Core.api
 
             var request = new RestRequest(method);
 
-            request.Resource = "Api/Score";
             request.RequestFormat = DataFormat.Json;
 
             //request.AddBody(request.JsonSerializer.Serialize(command));
