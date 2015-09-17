@@ -1,4 +1,5 @@
 ﻿using System;
+using Tanks.Core.api;
 
 namespace com.getbase.hackkrk.tanks
 {
@@ -6,10 +7,10 @@ namespace com.getbase.hackkrk.tanks
     //using Logger = org.slf4j.Logger;
     //using LoggerFactory = org.slf4j.LoggerFactory;
 
-	using Command = com.getbase.hackkrk.tanks.api.Command;
-	using GameSetup = com.getbase.hackkrk.tanks.api.GameSetup;
-	using TanksClient = com.getbase.hackkrk.tanks.api.TanksClient;
-	using TurnResult = com.getbase.hackkrk.tanks.api.TurnResult;
+	using Command = Command;
+	using GameSetup = GameSetup;
+	using TanksClient = TanksClient;
+	using TurnResult = TurnResult;
 
     //public static class Program
     //{

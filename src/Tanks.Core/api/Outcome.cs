@@ -1,4 +1,4 @@
-﻿namespace com.getbase.hackkrk.tanks.api
+﻿namespace Tanks.Core.api
 {
 	public class Outcome
 	{

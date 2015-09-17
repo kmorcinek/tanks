@@ -2,9 +2,8 @@
 using System.Net;
 using Newtonsoft.Json;
 using RestSharp;
-using RestSharp.Serializers;
 
-namespace com.getbase.hackkrk.tanks.api
+namespace Tanks.Core.api
 {
 
 

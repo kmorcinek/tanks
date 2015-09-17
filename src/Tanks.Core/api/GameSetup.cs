@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace com.getbase.hackkrk.tanks.api
+namespace Tanks.Core.api
 {
 
 	public class GameSetup

@@ -1,5 +1,5 @@
-﻿using com.getbase.hackkrk.tanks.api;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using Tanks.Core.api;
 using Xunit;
 
 namespace Tanks.Tests
