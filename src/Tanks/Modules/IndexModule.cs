@@ -1,6 +1,6 @@
 ﻿using Nancy;
 
-namespace Tanks.Modules
+namespace Tanks.Web.Modules
 {
     public class IndexModule : NancyModule
     {
