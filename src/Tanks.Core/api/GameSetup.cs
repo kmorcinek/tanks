@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
 
 namespace Tanks.Core.api
 {
@@ -8,6 +9,7 @@ namespace Tanks.Core.api
 		public string name;
 		public Scene scene;
 		public IList<Player> players;
+		public IList<Tank> tanks;
 
 		public class Scene
 		{
@@ -40,6 +42,13 @@ namespace Tanks.Core.api
 			}
 
 		}
+
+        public class Tank
+        {
+            public string name;
+            public string color;
+            public Vector2 position;
+        }
 
 		public override string ToString()
 		{

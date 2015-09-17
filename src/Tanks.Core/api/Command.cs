@@ -7,10 +7,10 @@
 		public double shotPower;
 		public double moveDistance;
 
-		private Command()
-		{
-		}
-
+	    public Command()
+	    {
+	        
+	    }
 		/// <summary>
 		/// Request the bot to move by a specified (horizontal) distance.
 		/// </summary>
