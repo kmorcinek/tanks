@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.IO;
+using Newtonsoft.Json;
 using Tanks.Core.api;
 using Xunit;
 
@@ -17,7 +18,8 @@ namespace Tanks.Tests
         [Fact]
         public void should_serialize_response_content2()
         {
-            var gameSetup = JsonConvert.DeserializeObject<GameSetup>(content);
+            var readAllText = File.ReadAllText("nextMoveResponse.txt");
+            var gameSetup = JsonConvert.DeserializeObject<GameSetup>(readAllText);
 
             Assert.NotNull(gameSetup);
         }
