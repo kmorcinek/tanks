@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 using Tanks.Core.api;
 
 namespace Tanks.Core
@@ -9,25 +8,22 @@ namespace Tanks.Core
 
     public class NaiveBot
     {
-        public static Command CurrentCommand;
-
         //private static readonly Logger log = LoggerFactory.getLogger(typeof(NaiveBot));
-        private Random rand = new Random();
+        private readonly Random _random = new Random();
 
         public static void Main(params string[] args)
         {
-            new NaiveBot().run();
+            new NaiveBot().Run();
         }
 
-        public virtual void run()
+        public virtual void Run()
         {
-            TanksClient client = new TanksClient("http://10.12.202.144:9999/tournaments", "/sandbox-5", "JoyfulMistyRoseRailRaven");
+            var client = new TanksClient("http://10.12.202.144:9999/tournaments", "/sandbox-5", "JoyfulMistyRoseRailRaven");
 
             while (true)
             {
-                GameSetup gameSetup;
                 Console.WriteLine("Waiting for the next game...");
-                gameSetup = client.MyGameSetup();
+                var gameSetup = client.GetMyGameSetup();
                 //Console.WriteLine(gameSetup);
 
                 PlayGame(gameSetup, client);
@@ -50,13 +46,13 @@ namespace Tanks.Core
 
         public virtual Command GenerateCommand(GameSetup gameSetup)
         {
-            if (rand.NextDouble() > 0.5)
+            if (_random.NextDouble() > 0.5)
             {
-                return Command.fire(rand.Next(90) - 45, rand.Next(100) + 30);
+                return Command.fire(_random.Next(90) - 45, _random.Next(100) + 30);
             }
             else
             {
-                return Command.move(rand.NextDouble() > 0.5 ? -100 : 100);
+                return Command.move(_random.NextDouble() > 0.5 ? -100 : 100);
             }
         }
     }
