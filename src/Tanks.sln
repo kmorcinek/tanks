@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks.Tests", "Tanks.Tests\Tanks.Tests.csproj", "{849C41D4-08A1-4691-B5C2-2B986502B660}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks.Core", "Tanks.Core\Tanks.Core.csproj", "{1E92CAC6-3F75-4FA6-BA38-C0F1D04A1EF2}"
 EndProject
 Global
@@ -14,12 +12,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{849C41D4-08A1-4691-B5C2-2B986502B660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{849C41D4-08A1-4691-B5C2-2B986502B660}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{849C41D4-08A1-4691-B5C2-2B986502B660}.DebugNoCodeAnalysis|Any CPU.ActiveCfg = Debug|Any CPU
-		{849C41D4-08A1-4691-B5C2-2B986502B660}.DebugNoCodeAnalysis|Any CPU.Build.0 = Debug|Any CPU
-		{849C41D4-08A1-4691-B5C2-2B986502B660}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{849C41D4-08A1-4691-B5C2-2B986502B660}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1E92CAC6-3F75-4FA6-BA38-C0F1D04A1EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1E92CAC6-3F75-4FA6-BA38-C0F1D04A1EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E92CAC6-3F75-4FA6-BA38-C0F1D04A1EF2}.DebugNoCodeAnalysis|Any CPU.ActiveCfg = Debug|Any CPU
