@@ -16,29 +16,7 @@ namespace Tanks.Core
 
         public static void Main(params string[] args)
         {
-
-            Task.Factory.StartNew(() =>
-                (new NaiveBot()).run());
-
-            CurrentCommand = new Command
-            {
-                shotAngle = 50,
-                shotPower = 60,
-            };
-
-            while (true)
-            {
-                var readLine = Console.ReadLine();
-
-                // 1,1
-                var strings = readLine.Split(',');
-
-                CurrentCommand = new Command
-                {
-                    shotAngle = int.Parse(strings[0]),
-                    shotPower = int.Parse(strings[1])
-                };
-            }
+            new NaiveBot().run();
         }
 
         public virtual void run()
@@ -48,22 +26,11 @@ namespace Tanks.Core
             while (true)
             {
                 GameSetup gameSetup;
-                try
-                {
-                    Console.WriteLine("setup before");
-                    //log.info("Waiting for the next game...");
-                    gameSetup = client.MyGameSetup();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                    continue;
-                }
-                Console.WriteLine("setup ok");
-                //log.info("Playing {}", gameSetup);
+                Console.WriteLine("Waiting for the next game...");
+                gameSetup = client.MyGameSetup();
+                //Console.WriteLine(gameSetup);
 
                 PlayGame(gameSetup, client);
-                Console.WriteLine("next game started");
             }
         }
 
@@ -73,7 +40,7 @@ namespace Tanks.Core
             while (!gameFinished)
             {
                 //Console.WriteLine("next shot");
-                TurnResult result = client.submitMove(GenerateCommand(gameSetup));
+                TurnResult result = client.SubmitMove(GenerateCommand(gameSetup));
 
                 gameFinished = result.last;
             }
@@ -83,8 +50,6 @@ namespace Tanks.Core
 
         public virtual Command GenerateCommand(GameSetup gameSetup)
         {
-            return NaiveBot.CurrentCommand;
-
             if (rand.NextDouble() > 0.5)
             {
                 return Command.fire(rand.Next(90) - 45, rand.Next(100) + 30);

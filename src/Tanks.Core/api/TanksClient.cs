@@ -5,19 +5,6 @@ using RestSharp;
 
 namespace Tanks.Core.api
 {
-
-
-    //using ClientProperties = org.glassfish.jersey.client.ClientProperties;
-    //using GZipEncoder = org.glassfish.jersey.message.GZipEncoder;
-    //using Logger = org.slf4j.Logger;
-    //using LoggerFactory = org.slf4j.LoggerFactory;
-
-    ////using JsonProcessingException = com.fasterxml.jackson.core.JsonProcessingException;
-    ////using DeserializationFeature = com.fasterxml.jackson.databind.DeserializationFeature;
-    ////using ObjectMapper = com.fasterxml.jackson.databind.ObjectMapper;
-
-    //using Throwables = jersey.repackaged.com.google.common.@base.Throwables;
-
     public class TanksClient
     {
         //private static readonly Logger log = LoggerFactory.getLogger(typeof(TanksClient));
@@ -38,18 +25,18 @@ namespace Tanks.Core.api
             //this.mapper = (new ObjectMapper()).configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         }
 
-        public virtual TurnResult submitMove(Command move)
+        public virtual TurnResult SubmitMove(Command move)
         {
             //log.info("Sending {}", move);
-            return request<TurnResult>("/moves", move, Method.POST);
+            return Request<TurnResult>("/moves", move, Method.POST);
         }
 
         public GameSetup MyGameSetup()
         {
-            return request<GameSetup>("/games/my/setup", null, Method.GET);
+            return Request<GameSetup>("/games/my/setup", null, Method.GET);
         }
 
-        private RESULT request<RESULT>(string path, Command command, RestSharp.Method method)
+        private TResult Request<TResult>(string path, Command command, RestSharp.Method method)
         {
             var restClient = new RestClient(this.url + this.tournamentId + path);
             restClient.AddDefaultHeader("Authorization", accessToken);
@@ -68,10 +55,10 @@ namespace Tanks.Core.api
 
             IRestResponse response = restClient.Execute(request);
 
-            return readResponse<RESULT>(response);
+            return ReadResponse<TResult>(response);
         }
 
-        private RESULT readResponse<RESULT>(IRestResponse response)
+        private static TResult ReadResponse<TResult>(IRestResponse response)
         {
             //log.info(responseText);
             if (response.StatusCode != HttpStatusCode.OK)
@@ -79,7 +66,7 @@ namespace Tanks.Core.api
                 Console.WriteLine(response.StatusCode + " status to byl");
                 throw new Exception();
             }
-            return JsonConvert.DeserializeObject<RESULT>(response.Content);
+            return JsonConvert.DeserializeObject<TResult>(response.Content);
         }
     }
 }
