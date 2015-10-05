@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Globalization;
 
 namespace Tanks.Core.api
 {
-
 	public class GameSetup
 	{
 		public string name;
@@ -40,7 +38,6 @@ namespace Tanks.Core.api
 			{
 				return "Player [name=" + name + ", color=" + color + "]";
 			}
-
 		}
 
         public class Tank
@@ -55,6 +52,4 @@ namespace Tanks.Core.api
 			return "GameSetup [name=" + name + ",\n scene=" + scene + ",\n players=" + players + "]";
 		}
 	}
-
-
 }

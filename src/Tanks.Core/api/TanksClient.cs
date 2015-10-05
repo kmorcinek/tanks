@@ -5,7 +5,6 @@ namespace Tanks.Core.api
 {
     public class TanksClient
     {
-        //private static readonly Logger log = LoggerFactory.getLogger(typeof(TanksClient));
         private readonly string _url;
         private readonly string _tournamentId;
         private readonly string _accessToken;
@@ -19,7 +18,7 @@ namespace Tanks.Core.api
 
         public virtual TurnResult SubmitMove(Command command)
         {
-            //log.info("Sending {}", move);
+            Console.WriteLine(command);
             var request = new RestRequest(Method.POST);
             var serialize = request.JsonSerializer.Serialize(command);
             request.AddParameter("application/json", serialize, ParameterType.RequestBody);

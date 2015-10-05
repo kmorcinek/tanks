@@ -53,13 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="api\Command.cs" />
-    <Compile Include="api\GameSetup.cs" />
-    <Compile Include="api\Outcome.cs" />
-    <Compile Include="api\Tank.cs" />
-    <Compile Include="api\TanksClient.cs" />
-    <Compile Include="api\TurnResult.cs" />
-    <Compile Include="api\Vector2.cs" />
+    <Compile Include="Api\Command.cs" />
+    <Compile Include="Api\GameSetup.cs" />
+    <Compile Include="Api\Outcome.cs" />
+    <Compile Include="Api\Tank.cs" />
+    <Compile Include="Api\TanksClient.cs" />
+    <Compile Include="Api\TurnResult.cs" />
+    <Compile Include="Api\Vector2.cs" />
     <Compile Include="NaiveBot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
