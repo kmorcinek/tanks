@@ -3,6 +3,7 @@ using Tanks.Core.api;
 
 namespace Tanks.Core
 {
+    // TODO: Maybe add log4net 
     public class NaiveBot
     {
         private const string Url = "http://10.12.202.144:9999/tournaments";
