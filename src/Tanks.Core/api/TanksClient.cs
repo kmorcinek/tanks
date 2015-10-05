@@ -25,7 +25,7 @@ namespace Tanks.Core.api
             request.AddParameter("application/json", serialize, ParameterType.RequestBody);
             request.RequestFormat = DataFormat.Json;
 
-            return Request<TurnResult>("/moves", request);
+            return SendRequest<TurnResult>("/moves", request);
         }
 
         public GameSetup GetMyGameSetup()
@@ -35,12 +35,12 @@ namespace Tanks.Core.api
                 RequestFormat = DataFormat.Json
             };
 
-            return Request<GameSetup>("/games/my/setup", request);
+            return SendRequest<GameSetup>("/games/my/setup", request);
         }
 
-        private TResult Request<TResult>(string path, IRestRequest request) where TResult : new()
+        private TResult SendRequest<TResult>(string path, IRestRequest request) where TResult : new()
         {
-            var restClient = new RestClient(this._url + this._tournamentId + path);
+            var restClient = new RestClient(_url + _tournamentId + path);
             restClient.Timeout = TimeSpan.FromSeconds(30).Milliseconds;
 
             restClient.AddDefaultHeader("Authorization", _accessToken);

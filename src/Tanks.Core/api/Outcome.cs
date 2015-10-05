@@ -15,5 +15,4 @@
 			ground_hit
 		}
 	}
-
 }
