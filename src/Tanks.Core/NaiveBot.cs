@@ -8,6 +8,10 @@ namespace Tanks.Core
 
     public class NaiveBot
     {
+        private const string Url = "http://10.12.202.144:9999/tournaments";
+        private const string TournamentId = "/sandbox-5";
+        private const string AccessToken = "JoyfulMistyRoseRailRaven";
+
         //private static readonly Logger log = LoggerFactory.getLogger(typeof(NaiveBot));
         private readonly Random _random = new Random();
 
@@ -18,7 +22,7 @@ namespace Tanks.Core
 
         public virtual void Run()
         {
-            var client = new TanksClient("http://10.12.202.144:9999/tournaments", "/sandbox-5", "JoyfulMistyRoseRailRaven");
+            TanksClient client = new TanksClient(Url, TournamentId, AccessToken);
 
             while (true)
             {
