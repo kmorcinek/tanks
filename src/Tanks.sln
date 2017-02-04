@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks.Core", "Tanks.Core\Tanks.Core.csproj", "{1E92CAC6-3F75-4FA6-BA38-C0F1D04A1EF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks.Core", "Tanks.Core\Tanks.Core.csproj", "{0E7CDA3C-AC07-49DA-A4DF-1A7AC5E1B491}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,12 +12,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1E92CAC6-3F75-4FA6-BA38-C0F1D04A1EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E92CAC6-3F75-4FA6-BA38-C0F1D04A1EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E92CAC6-3F75-4FA6-BA38-C0F1D04A1EF2}.DebugNoCodeAnalysis|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E92CAC6-3F75-4FA6-BA38-C0F1D04A1EF2}.DebugNoCodeAnalysis|Any CPU.Build.0 = Debug|Any CPU
-		{1E92CAC6-3F75-4FA6-BA38-C0F1D04A1EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E92CAC6-3F75-4FA6-BA38-C0F1D04A1EF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E7CDA3C-AC07-49DA-A4DF-1A7AC5E1B491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E7CDA3C-AC07-49DA-A4DF-1A7AC5E1B491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E7CDA3C-AC07-49DA-A4DF-1A7AC5E1B491}.DebugNoCodeAnalysis|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E7CDA3C-AC07-49DA-A4DF-1A7AC5E1B491}.DebugNoCodeAnalysis|Any CPU.Build.0 = Debug|Any CPU
+		{0E7CDA3C-AC07-49DA-A4DF-1A7AC5E1B491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E7CDA3C-AC07-49DA-A4DF-1A7AC5E1B491}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

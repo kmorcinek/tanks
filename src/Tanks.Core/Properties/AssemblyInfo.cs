@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
@@ -8,9 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Tanks.Core")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Tanks.Core")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +17,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6727d0fe-24b8-49c1-9cbb-ccd44f87e87d")]
+[assembly: Guid("0e7cda3c-ac07-49da-a4df-1a7ac5e1b491")]
 
 // Version information for an assembly consists of the following four values:
 //
