@@ -2,7 +2,7 @@
 
 namespace Tanks.Core.api
 {
-	public class GameSetup
+	public class Setup
 	{
 		public string name;
 		public Scene scene;

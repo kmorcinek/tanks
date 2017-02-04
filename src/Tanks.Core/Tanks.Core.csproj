@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="api\Command.cs" />
-    <Compile Include="api\GameSetup.cs" />
+    <Compile Include="api\Setup.cs" />
     <Compile Include="api\Outcome.cs" />
     <Compile Include="api\Tank.cs" />
     <Compile Include="api\TanksClient.cs" />

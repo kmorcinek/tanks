@@ -31,12 +31,12 @@ namespace Tanks.Core
             }
         }
 
-        private void PlayGame(GameSetup gameSetup, TanksClient client)
+        private void PlayGame(Setup setup, TanksClient client)
         {
             bool gameFinished = false;
             while (!gameFinished)
             {
-                TurnResult result = client.SubmitMove(GenerateCommand(gameSetup));
+                TurnResult result = client.SubmitMove(GenerateCommand(setup));
 
                 gameFinished = result.last;
             }
@@ -44,7 +44,7 @@ namespace Tanks.Core
             Console.WriteLine("game finished");
         }
 
-        public virtual Command GenerateCommand(GameSetup gameSetup)
+        public virtual Command GenerateCommand(Setup setup)
         {
             if (_random.NextDouble() > 0.5)
             {

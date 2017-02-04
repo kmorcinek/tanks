@@ -27,14 +27,14 @@ namespace Tanks.Core.api
             return SendRequest<TurnResult>("/moves", request);
         }
 
-        public GameSetup GetMyGameSetup()
+        public Setup GetMyGameSetup()
         {
             var request = new RestRequest(Method.GET)
             {
                 RequestFormat = DataFormat.Json
             };
 
-            return SendRequest<GameSetup>("/games/my/setup", request);
+            return SendRequest<Setup>("/games/my/setup", request);
         }
 
         private TResult SendRequest<TResult>(string path, IRestRequest request) where TResult : new()
